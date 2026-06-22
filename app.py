@@ -131,9 +131,12 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
-if new_game:
+if new_game: #FIXME: Gamestate not reset
     st.session_state.attempts = 0
-    st.session_state.secret = random.randint(1, 100)
+    st.session_state.secret = random.randint(1,100) #FIXME: secret not corresponding to level
+    #st.session_state.secret = random.randint(low, high)
+    #st.session_state.status = "playing"
+    #st.session_state.history = []
     st.success("New game started.")
     st.rerun()
 
