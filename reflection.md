@@ -17,7 +17,7 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 | Difficulty: Easy | 1 - 20 | 31 | none | /
-| New Game | Game restarts: new secret, guess again | new secret, unable to guess | "You already won. Start a new game to play again." |
+| New Game | Game restarts: new secret, guess again | new secret, unable to guess | "You already won. Start a new game to play again." | /
 | Guessed 99 while secret is 30 | Hint: Go lower | Hint: Go higher | none | /
 | Guessed 200 while secret is 29 | Hint: Go lower| Hint: Go higher | none | /
 | Guessed -200 while secret is 29 | Hint: Go higher | Hint: Go lower | none | /
