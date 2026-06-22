@@ -26,29 +26,31 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+   + To guess a random number from 1 to 25/50/100 depending on the difficulty. Just a simple fidget game.
 - [ ] Detail which bugs you found.
+   + Quite a few: The code containing logic wasn't in the right file; The logic of the hints were switched up; the difficulty were not even correct (1-100 for Normal, 1-50 for Hard); Guessing out of bounds showed a bug where the number got cast into a string if the attempt was even; The score calculator did not compensate justifiably to the number of guesses; Case sensitivity when typing out in the difficulty selector.
 - [ ] Explain what fixes you applied.
+   + All of them was really straightforward. I just need to go to the code where the logic breaks, put a right fix to it (which usually just requires switching up existing code or just a few line of simple code), then it is done. After that, ran pytest and run the app again myself to test it manually.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. Select Hard (1-100) and guesses 50
+2. Game returns "Too Low", if get hint is checked: "Go HIGHER!"
+3. Guesses 60, game returns " Too High", "Go LOWER!"
+4. Guesses 57, Correct number, game won
+5. Score updates according to each guess and whether game is won or lost. Press new game to play again
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
 # Paste your pytest output here, e.g.:
 # pytest tests/
-# ========================= X passed in 0.XXs =========================
+# ========================= 32 passed in 0.11s =========================
 ```
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+- Did not implement
