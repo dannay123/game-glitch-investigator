@@ -25,11 +25,11 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
+- [x] Describe the game's purpose.
    + To guess a random number from 1 to 25/50/100 depending on the difficulty. Just a simple fidget game.
-- [ ] Detail which bugs you found.
+- [x] Detail which bugs you found.
    + Quite a few: The code containing logic wasn't in the right file; The logic of the hints were switched up; the difficulty were not even correct (1-100 for Normal, 1-50 for Hard); Guessing out of bounds showed a bug where the number got cast into a string if the attempt was even; The score calculator did not compensate justifiably to the number of guesses; Case sensitivity when typing out in the difficulty selector.
-- [ ] Explain what fixes you applied.
+- [x] Explain what fixes you applied.
    + All of them was really straightforward. I just need to go to the code where the logic breaks, put a right fix to it (which usually just requires switching up existing code or just a few line of simple code), then it is done. After that, ran pytest and run the app again myself to test it manually.
 
 ## 📸 Demo Walkthrough
